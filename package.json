@@ -1,15 +1,15 @@
 {
-  "name": "react-native-pell-rich-editor",
+  "name": "@ouvrages/react-native-pell-rich-editor",
   "description": "React Native Rich Editor",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "src/index.js",
   "author": {
-    "name": "wxik",
-    "email": "stulip@126.com"
+    "name": "Ouvrages",
+    "email": "contact@ouvrages-web.fr"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wxik/react-native-rich-editor.git"
+    "url": "https://github.com/ouvrages/react-native-rich-editor.git"
   },
   "dependencies": {
   },
