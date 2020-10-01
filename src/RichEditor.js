@@ -173,6 +173,8 @@ export default class RichTextEditor extends Component {
         const {html: viewHTML} = that.state;
         // webview dark theme bug
         const opacity = that.state.isInit ? 1 : 0;
+
+        // https://github.com/react-native-webview/react-native-webview/issues/1069
         return (
             <>
                 <WebView
@@ -191,6 +193,7 @@ export default class RichTextEditor extends Component {
                     source={viewHTML}
                     opacity={opacity}
                     onLoad={that.init}
+                    androidHardwareAccelerationDisabled={true}
                 />
                 {Platform.OS === 'android' && <TextInput ref={(ref) => (that._input = ref)} style={styles._input} />}
             </>
