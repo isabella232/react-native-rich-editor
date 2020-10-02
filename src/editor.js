@@ -194,8 +194,8 @@ function createHTML(options = {}) {
         };
 
         var init = function init(settings) {
-            var defaultParagraphSeparator = settings[defaultParagraphSeparatorString] || 'div';
-            var content = settings.element.content = createElement('div');
+            var defaultParagraphSeparator = settings[defaultParagraphSeparatorString] || 'p';
+            var content = settings.element.content = createElement('p');
             content.id = 'content';
             content.contentEditable = true;
             content.spellcheck = false;
@@ -282,7 +282,7 @@ function createHTML(options = {}) {
 
         editor = init({
             element: document.getElementById('editor'),
-            defaultParagraphSeparator: 'div',
+            defaultParagraphSeparator: 'p',
             onChange: function (){
                 setTimeout(function(){
                     postAction({type: 'CONTENT_CHANGE', data: Actions.content.getHtml()});
